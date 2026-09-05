@@ -225,7 +225,7 @@ To enable the contact form to dispatch messages to your inbox via the Resend API
 **Yash Raj**  
 *Software Developer | Full-Stack • AI/ML • Data*
 
-- 🌐 **Portfolio:** [yash-raj-portfolio.vercel.app](https://yash-raj-portfolio.vercel.app/)
+- 🌐 **Portfolio:** [yash-raj-portfolio.vercel.app](https://yash-raj-portfolio-website-neon.vercel.app/)
 - 💼 **LinkedIn:** [/in/yash-raj-7225b3212](https://linkedin.com/in/yash-raj-7225b3212)
 - 🐙 **GitHub:** [@Yashraj413](https://github.com/Yashraj413)
 - ⚡ **LeetCode:** [@Yashraj012](https://leetcode.com/u/Yashraj012/)
