@@ -32,7 +32,7 @@
   </p>
 
   <p align="center">
-    <a href="https://yash-raj-portfolio.vercel.app/"><strong>Explore Live Demo »</strong></a>
+    <a href="https://yash-raj-portfolio-website-neon.vercel.app/"><strong>Explore Live Demo »</strong></a>
     &nbsp;•&nbsp;
     <a href="https://github.com/Yashraj413/Yash-Raj-Portfolio-Website/issues">Report Bug</a>
     &nbsp;•&nbsp;
