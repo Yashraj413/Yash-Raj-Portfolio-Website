@@ -1,4 +1,4 @@
-# Yash Raj — Personal Portfolio Website
+# Yash Raj - Personal Portfolio Website
 
 <div align="center">
 
