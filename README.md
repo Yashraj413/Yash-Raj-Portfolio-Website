@@ -3,8 +3,8 @@
 <div align="center">
 
   <!-- Live Demo & Stats Badges -->
-  <a href="https://yash-raj-portfolio.vercel.app/">
-    <img src="https://img.shields.io/badge/Live%20Demo-yash--raj--portfolio.vercel.app-00dfa2?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" />
+  <a href="https://yash-raj-portfolio-website-neon.vercel.app/">
+    <img src="https://img.shields.io/badge/Live%20Demo-yash--raj--portfolio-00dfa2?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo" />
   </a>
   <a href="https://github.com/Yashraj413/Yash-Raj-Portfolio-Website">
     <img src="https://img.shields.io/github/stars/Yashraj413/Yash-Raj-Portfolio-Website?style=for-the-badge&color=ffd700&logo=github" alt="GitHub Stars" />
@@ -225,7 +225,7 @@ To enable the contact form to dispatch messages to your inbox via the Resend API
 **Yash Raj**  
 *Software Developer | Full-Stack • AI/ML • Data*
 
-- 🌐 **Portfolio:** [yash-raj-portfolio.vercel.app](https://yash-raj-portfolio-website-neon.vercel.app/)
+- 🌐 **Portfolio:** [yash-raj-portfolio-website-neon.vercel.app](https://yash-raj-portfolio-website-neon.vercel.app/)
 - 💼 **LinkedIn:** [/in/yash-raj-7225b3212](https://linkedin.com/in/yash-raj-7225b3212)
 - 🐙 **GitHub:** [@Yashraj413](https://github.com/Yashraj413)
 - ⚡ **LeetCode:** [@Yashraj012](https://leetcode.com/u/Yashraj012/)

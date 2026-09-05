@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yash-raj-portfolio.vercel.app/sitemap.xml
+Sitemap: https://yash-raj-portfolio-website-neon.vercel.app/sitemap.xml
