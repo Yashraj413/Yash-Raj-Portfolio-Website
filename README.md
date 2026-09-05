@@ -229,7 +229,7 @@ To enable the contact form to dispatch messages to your inbox via the Resend API
 - 💼 **LinkedIn:** [/in/yash-raj-7225b3212](https://linkedin.com/in/yash-raj-7225b3212)
 - 🐙 **GitHub:** [@Yashraj413](https://github.com/Yashraj413)
 - ⚡ **LeetCode:** [@Yashraj012](https://leetcode.com/u/Yashraj012/)
-- 📧 **Email:** [yashraj27999@gmail.com](mailto:yashraj27999@gmail.com)
+- 📧 **Email:** [yashraj41323@gmail.com](mailto:yashraj41323@gmail.com)
 
 ---
 
