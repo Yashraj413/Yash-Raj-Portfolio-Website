@@ -9,6 +9,19 @@ module.exports = async function handler(req, res) {
   const receiverEmail = process.env.RECEIVER_EMAIL;
 
   if (!resendApiKey || !receiverEmail) {
+    if (process.env.NODE_ENV !== 'production') {
+      const { name, email, message } = req.body || {};
+      console.log('\n📬 [LOCAL DEV] Form Submission Received (Mocked Delivery):');
+      console.log(`   👤 Name:    ${name || 'N/A'}`);
+      console.log(`   ✉️  Email:   ${email || 'N/A'}`);
+      console.log(`   💬 Message: ${message || 'N/A'}`);
+      console.log('   💡 Tip: Add RESEND_API_KEY and RECEIVER_EMAIL in .env to send real emails.\n');
+      return res.status(200).json({
+        success: true,
+        message: 'Message received in development mode!'
+      });
+    }
+
     return res.status(500).json({
       message: 'Server Configuration Error: Missing RESEND_API_KEY or RECEIVER_EMAIL'
     });

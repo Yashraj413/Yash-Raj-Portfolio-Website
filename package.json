@@ -5,8 +5,8 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx http-server -p 3000",
-    "serve": "npx http-server -p 3000"
+    "dev": "node dev-server.js",
+    "serve": "node dev-server.js"
   },
   "repository": {
     "type": "git",

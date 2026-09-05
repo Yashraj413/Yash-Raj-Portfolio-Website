@@ -219,8 +219,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 body: json
             })
                 .then(async (response) => {
-                    let json = await response.json();
-                    if (response.status == 200) {
+                    let json = {};
+                    try {
+                        json = await response.json();
+                    } catch (e) {
+                        json = {};
+                    }
+                    if (response.ok && response.status == 200) {
 
                         btn.innerHTML = '<span>Message Delivered!</span> <i class="fa-solid fa-check"></i>';
                         btn.style.background = 'linear-gradient(90deg, #22c55e, #16a34a, #22c55e)';
