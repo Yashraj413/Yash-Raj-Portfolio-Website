@@ -60,7 +60,7 @@
 
 ## 🌟 Overview
 
-This repository contains the source code for the personal portfolio of **Yash Raj** — Software Developer specializing in Full-Stack Engineering, AI/ML, and Data Analytics.
+This repository contains the source code for the personal portfolio of **Yash Raj** - Software Developer specializing in Full-Stack Engineering, AI/ML, and Data Analytics.
 
 Designed with a cosmic dark-mode theme, the application delivers an immersive user experience through a **Three.js WebGL particle field**, **dynamic camera parallax**, **GSAP timeline reveals**, and **fluid interactive micro-animations**. The contact form utilizes a secure **Vercel Serverless Function** integrated with the **Resend API**, ensuring zero exposure of private API credentials in client-side code.
 
