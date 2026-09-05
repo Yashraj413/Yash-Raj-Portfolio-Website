@@ -1,0 +1,26 @@
+{
+  "name": "yashraj-portfolio",
+  "version": "1.0.0",
+  "description": "Personal Portfolio Website of Yash Raj",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx http-server -p 3000",
+    "serve": "npx http-server -p 3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yashraj413/Yash-Raj-Portfolio-Website.git"
+  },
+  "keywords": [],
+  "author": "Yash Raj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yashraj413/Yash-Raj-Portfolio-Website/issues"
+  },
+  "homepage": "https://github.com/Yashraj413/Yash-Raj-Portfolio-Website#readme",
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0"
+  }
+}

@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yash Raj — Software Developer | Full-Stack • AI/ML • Data</title>
+    <meta name="description"
+        content="Yash Raj is a Software Developer focused on full-stack engineering, AI/ML, data analytics, and scalable digital products.">
+    <link rel="canonical" href="https://yash-raj-portfolio.vercel.app/" />
+
+    <!-- Open Graph SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Yash Raj — Software Developer | Full-Stack • AI/ML • Data">
+    <meta property="og:description" content="Explore my projects, work experience, and technical skills.">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/Yashraj413/Yash-Raj-Portfolio-Website/main/portfolio_assets/YR_Favicon.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Yash Raj — Software Developer | Full-Stack • AI/ML • Data">
+    <meta name="twitter:description" content="Explore my projects, work experience, and technical skills.">
+    <meta name="twitter:image"
+        content="https://raw.githubusercontent.com/Yashraj413/Yash-Raj-Portfolio-Website/main/portfolio_assets/YR_Favicon.jpg">
+
+    <link rel="icon" href="portfolio_assets/YR_Favicon.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+    <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
+    <script type="module" src="./speed-insights.js"></script>
+</head>
+
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+    <!-- ── Floating Navbar ── -->
+    <nav class="site-nav" id="siteNav">
+        <div class="nav-pill">
+            <span class="nav-indicator" id="navIndicator"></span>
+            <a href="#home" class="nav-link active" data-section="home">
+                <i class="fa-solid fa-house nav-icon"></i>
+                <span class="nav-label">Home</span>
+            </a>
+            <a href="#about" class="nav-link" data-section="about">
+                <i class="fa-solid fa-user nav-icon"></i>
+                <span class="nav-label">About</span>
+            </a>
+            <a href="#experience" class="nav-link" data-section="experience">
+                <i class="fa-solid fa-briefcase nav-icon"></i>
+                <span class="nav-label">Experience</span>
+            </a>
+            <a href="#education" class="nav-link" data-section="education">
+                <i class="fa-solid fa-graduation-cap nav-icon"></i>
+                <span class="nav-label">Education</span>
+            </a>
+            <a href="#projects" class="nav-link" data-section="projects">
+                <i class="fa-solid fa-code nav-icon"></i>
+                <span class="nav-label">Projects</span>
+            </a>
+            <a href="#skills" class="nav-link" data-section="skills">
+                <i class="fa-solid fa-layer-group nav-icon"></i>
+                <span class="nav-label">Skills</span>
+            </a>
+            <a href="#certifications" class="nav-link" data-section="certifications">
+                <i class="fa-solid fa-award nav-icon"></i>
+                <span class="nav-label">Certs</span>
+            </a>
+            <a href="#achievements" class="nav-link" data-section="achievements">
+                <i class="fa-solid fa-trophy nav-icon"></i>
+                <span class="nav-label">Achievements</span>
+            </a>
+            <a href="#profiles" class="nav-link" data-section="profiles">
+                <i class="fa-solid fa-globe nav-icon"></i>
+                <span class="nav-label">Profiles</span>
+            </a>
+            <a href="#contact" class="nav-link" data-section="contact">
+                <i class="fa-solid fa-envelope nav-icon"></i>
+                <span class="nav-label">Contact</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- ── Preloader: Boot Sequence ── -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-particles" id="preloaderParticles"></div>
+
+        <!-- Branding -->
+        <div class="preloader-brand">
+            <div class="preloader-brand-main">
+                <span class="preloader-brand-name">Yash</span><span class="preloader-brand-accent">Raj</span>
+            </div>
+            <div class="preloader-brand-subtitle">
+                <span class="subtitle-line"></span>
+                <span>Software Developer</span>
+                <span class="subtitle-line"></span>
+            </div>
+        </div>
+
+        <!-- Sleek Loading Bar -->
+        <div class="preloader-sleek-track">
+            <div class="preloader-sleek-fill" id="preloaderSleekFill"></div>
+        </div>
+
+        <!-- Cycling Tagline -->
+        <div class="preloader-tagline">
+            <span class="tagline-word" style="--w:0">Engineer.</span>
+            <span class="tagline-word" style="--w:1">Analyze.</span>
+            <span class="tagline-word" style="--w:2">Architect.</span>
+            <span class="tagline-word" style="--w:3">Ship.</span>
+        </div>
+    </div>
+
+    <div class="cursor-dot" data-cursor-dot></div>
+    <div class="cursor-outline" data-cursor-outline></div>
+
+    <div class="background-container">
+        <canvas id="bg-canvas"></canvas>
+
+    </div>
+
+    <main class="hero" id="home">
+
+        <div class="floating-icon icon-top-left">
+            <i class="fa-solid fa-code"></i>
+        </div>
+        <div class="floating-icon icon-top-right">
+            <i class="fa-solid fa-brain"></i>
+        </div>
+        <div class="floating-icon icon-bottom-left">
+            <i class="fa-solid fa-trophy"></i>
+        </div>
+        <div class="floating-icon icon-bottom-right">
+            <i class="fa-regular fa-lightbulb"></i>
+        </div>
+
+        <div class="content-wrapper">
+            <h2 class="sub-title">Woah! You Landed on the Portfolio Website of The</h2>
+            <br>
+            <br>
+            <h1 class="sr-only">Yash Raj - Software Developer Portfolio</h1>
+            <h2 class="main-title">
+                <span class="purple-text" id="typing-text"></span>
+            </h2>
+            <br>
+            <br>
+            <h5 class="year">Yash Raj | Software Developer</h5>
+            <p style="max-width: 620px; margin: 18px auto 0; color: #a1a1aa; font-size: 1.05rem; line-height: 1.7;">
+                I build intelligent, scalable digital products across full-stack engineering, AI/ML, and data by
+                turning complex problems into practical, high-impact software.
+            </p>
+            <br>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn-resume">View My Work</a>
+                <a href="mailto:yashraj2349@gmail.com" target="_blank" class="btn-resume">Let's
+                    Connect</a>
+                <a href="javascript:void(0)" id="openResumeBtn" class="btn-resume">View Resume</a>
+            </div>
+        </div>
+    </main>
+
+    <section class="about-section" id="about">
+        <div class="glass-card scroll-reveal">
+            <h2>About Me - <span class="purple-text">Behind The Code!</span></h2>
+            <p>
+                I'm a Software Developer focused on building scalable applications and intelligent data-driven
+                systems. My work spans full-stack development, machine learning, analytics, APIs, databases, and
+                modern software engineering.
+
+                <br><br>I enjoy working at the intersection of Software Engineering, AI/ML, Data, Product Thinking,
+                and System Design by turning complex problems into practical, high-impact software.
+            </p>
+        </div>
+    </section>
+
+    <br>
+
+    <section class="projects-section" id="experience">
+        <h2 class="section-title">Work Experience - <span class="purple-text">Professional Journey!</span></h2>
+        <br>
+        <div class="timeline">
+            <div class="timeline-line">
+                <div class="timeline-progress"></div>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-number">01</div>
+                <div class="timeline-content">
+                    <div class="project-tag">BlueBinaries Engineering and Solutions Pvt. Ltd.</div>
+                    <img src="portfolio_assets/BlueBinaries_Logo.webp" alt="BlueBinaries Logo" class="company-logo">
+                    <h3>Software Engineer Intern</h3>
+                    <p style="text-align: left; padding: 10px 0;">
+                        • Architected a full-stack automotive test-intelligence platform (React/TypeScript,
+                        Node.js/Express/TypeScript, PostgreSQL) across an npm-workspace monorepo, exposing 80+ REST
+                        endpoints to test-engineering stakeholders.<br><br>
+                        • Engineered an automated ingestion pipeline that watches, hashes, and classifies dSPACE PDF
+                        and NI TestStand HTML reports in real time, cutting manual report-processing effort by an
+                        estimated 70%.<br><br>
+                        • Built a Server-Sent Events broadcast layer wired into TanStack Query cache invalidation,
+                        dropping dashboard staleness to under 2 seconds across 9 live data views.<br><br>
+                        • Secured the platform with JWT authentication, bcrypt hashing, tiered rate limiting, and
+                        automatic account lockout across all auth endpoints.
+                    </p>
+                </div>
+                <div class="timeline-date">JUN 2026 – PRESENT</div>
+                <div class="timeline-dot"></div>
+            </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-number">02</div>
+                <div class="timeline-content">
+                    <div class="project-tag">PearlThoughts</div>
+                    <img src="portfolio_assets/PearlThoughts_Logo.png" alt="PearlThoughts Logo" class="company-logo">
+                    <h3>Software Engineer Intern</h3>
+                    <p style="text-align: left; padding: 10px 0;">
+                        • Accelerated feature delivery on a live doctor-appointment application by engineering
+                        reusable, OOP-structured components for profiles, booking, registration, and search.<br><br>
+                        • Enabled real-time, seamless appointment scheduling by integrating REST APIs that powered
+                        accurate, live doctor-availability updates.<br><br>
+                        • Reduced cross-browser defects reaching production through systematic testing across
+                        Chrome, Firefox, and Safari before every sprint release.
+                    </p>
+                </div>
+                <div class="timeline-date">JUL 2025 – AUG 2025</div>
+                <div class="timeline-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <br>
+
+    <section class="projects-section" id="education">
+        <h2 class="section-title">Education - <span class="purple-text">The Foundation!</span></h2>
+        <br>
+        <div class="timeline">
+            <div class="timeline-line">
+                <div class="timeline-progress"></div>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-number">01</div>
+                <div class="timeline-content">
+                    <div class="project-tag">Graphic Era Hill University</div>
+                    <img src="portfolio_assets/GEHU_Logo.webp" alt="Graphic Era Hill University Logo"
+                        class="company-logo">
+                    <h3>B.Tech, Computer Science and Engineering</h3>
+                    <p style="text-align: left; padding: 10px 0;">
+                        Dehradun, India · CGPA: 7.1
+                    </p>
+                </div>
+                <div class="timeline-date">AUG 2022 – JUN 2026</div>
+                <div class="timeline-dot"></div>
+            </div>
+
+            <div class="timeline-item right">
+                <div class="timeline-number">02</div>
+                <div class="timeline-content">
+                    <div class="project-tag">Sri Chaitanya Techno School</div>
+                    <img src="portfolio_assets/SriChaitanya_Logo.jpg" alt="Sri Chaitanya Techno School Logo"
+                        class="company-logo">
+                    <h3>Intermediate</h3>
+                    <p style="text-align: left; padding: 10px 0;">
+                        Visakhapatnam, India · Percentage: 89.8%
+                    </p>
+                </div>
+                <div class="timeline-date">APR 2020 – MAR 2021</div>
+                <div class="timeline-dot"></div>
+            </div>
+
+            <div class="timeline-item left">
+                <div class="timeline-number">03</div>
+                <div class="timeline-content">
+                    <div class="project-tag">Surendranath Centenary School</div>
+                    <img src="portfolio_assets/SurendranathCentenary_Logo.gif" alt="Surendranath Centenary School Logo"
+                        class="company-logo">
+                    <h3>High School</h3>
+                    <p style="text-align: left; padding: 10px 0;">
+                        Ranchi, India · Percentage: 83.8%
+                    </p>
+                </div>
+                <div class="timeline-date">APR 2018 – MAR 2019</div>
+                <div class="timeline-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <br>
+
+    <section class="projects-section" id="projects">
+        <h2 class="section-title">Projects Showcase - <span class="purple-text">What I've Built!</span></h2>
+        <br>
+        <div class="experience-grid">
+
+            <div class="experience-card" style="border-color: rgba(168,85,247,0.5);">
+                <div class="experience-date"></div>
+                <div class="project-tag" style="display: inline-block; width: max-content;">Flagship Project · AI / NLP
+                </div>
+                <h3>Resume Analytics Engine</h3>
+                <p>
+                    An automated, NLP-driven resume screening, semantic matching, scoring, feedback, and ranking
+                    analytics system for candidate-job matching. Cut recruiter shortlisting time by 60% across
+                    200+ job postings, with a semantic matching engine processing 300+ applicants daily and a 22%
+                    improvement in match precision over keyword-only methods.
+                </p>
+                <div class="project-links-wrapper">
+                    <a href="https://resume-analytics-project.vercel.app/" target="_blank"
+                        class="project-btn primary-btn"><i class="fa-regular fa-eye"></i> View Live</a>
+                    <a href="https://github.com/Yashraj413/resume-analytics-project" target="_blank"
+                        class="project-btn primary-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+                </div>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-date"></div>
+                <div class="project-tag" style="display: inline-block; width: max-content;">Credit Risk & Fraud
+                    Analytics</div>
+                <h3>Credit Risk & Fraud Analytics Platform</h3>
+                <p>
+                    Production-grade credit risk scoring built on an XGBoost risk engine with SHAP explainability,
+                    unified with real-time fraud detection behind a single FastAPI service featuring cost-sensitive
+                    threshold optimization, hash-chained audit logging, and PSI-based drift monitoring.
+                </p>
+                <div class="project-links-wrapper">
+                    <a href="https://credit-risk-analytics-dashboard-hltxau9crhiogxyd3wbeq9.streamlit.app/"
+                        target="_blank" class="project-btn primary-btn"><i class="fa-regular fa-eye"></i> View Live</a>
+                    <a href="https://github.com/Yashraj413/credit-risk-analytics-dashboard" target="_blank"
+                        class="project-btn primary-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+                </div>
+            </div>
+
+            <div class="experience-card">
+                <div class="experience-date"></div>
+                <div class="project-tag" style="display: inline-block; width: max-content;">Business Intelligence</div>
+                <h3>E-commerce Analytics Platform</h3>
+                <p>
+                    A PostgreSQL star-schema data warehouse and Python analysis engine modeling orders, support
+                    tickets, and fulfillment SLAs — powering a KPI and cost-efficiency pipeline plus an interactive
+                    React/Recharts dashboard for real-time order and delivery trends.
+                </p>
+                <div class="project-links-wrapper">
+                    <a href="https://ecommerce-analytics-pi.vercel.app/" target="_blank"
+                        class="project-btn primary-btn"><i class="fa-regular fa-eye"></i> View Live</a>
+                    <a href="https://github.com/Yashraj413/ecommerce-analytics" target="_blank"
+                        class="project-btn primary-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+                </div>
+            </div>
+
+            <div class="experience-card">
+                <div class="project-tag" style="display: inline-block; width: max-content;">Operations Analytics</div>
+                <h3>Support Ops & Delivery Delay Analytics</h3>
+                <p>
+                    An analytics project examining support operations and delivery delay patterns.
+                </p>
+                <div class="project-links-wrapper">
+                    <a href="https://support-ops-analytics.vercel.app/" target="_blank"
+                        class="project-btn primary-btn"><i class="fa-regular fa-eye"></i> View Live</a>
+                    <a href="https://github.com/Yashraj413/support-ops-analytics" target="_blank"
+                        class="project-btn primary-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+                </div>
+            </div>
+
+            <div class="experience-card">
+                <div class="project-tag" style="display: inline-block; width: max-content;">Retail Analytics</div>
+                <h3>Retail Revenue Intelligence System</h3>
+                <p>
+                    A retail analytics project exploring revenue performance and business intelligence insights.
+                </p>
+                <div class="project-links-wrapper">
+                    <a href="https://retail-revenue-intelligence.vercel.app/" target="_blank"
+                        class="project-btn primary-btn"><i class="fa-regular fa-eye"></i> View Live</a>
+                    <a href="https://github.com/Yashraj413/retail-revenue-intelligence" target="_blank"
+                        class="project-btn primary-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+                </div>
+            </div>
+
+            <div class="experience-card">
+                <div class="project-tag" style="display: inline-block; width: max-content;">Systems / Management</div>
+                <h3>Airline Management System</h3>
+                <p>
+                    A management-system project modeling airline operations and bookings.
+                </p>
+                <div class="project-links-wrapper">
+                    <a href="javascript:void(0)" class="project-btn primary-btn inactive-btn"><i
+                            class="fa-regular fa-eye"></i> View Live</a>
+                    <a href="https://github.com/Yashraj413/Airline-Management-System" target="_blank"
+                        class="project-btn primary-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+                </div>
+            </div>
+
+            <div class="experience-card">
+                <div class="project-tag" style="display: inline-block; width: max-content;">NLP / Matching</div>
+                <h3>Resume-Job Matcher</h3>
+                <p>
+                    A matching tool that compares resumes against job descriptions.
+                </p>
+                <div class="project-links-wrapper">
+                    <a href="javascript:void(0)" class="project-btn primary-btn inactive-btn"><i
+                            class="fa-regular fa-eye"></i> View Live</a>
+                    <a href="https://github.com/Yashraj413/Resume-Job-Matcher" target="_blank"
+                        class="project-btn primary-btn"><i class="fa-brands fa-github"></i> GitHub</a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <br>
+
+    <section class="skills-section" id="skills">
+        <h2 class="section-title">Technical Skills - <span class="purple-text">Core Expertise!</span></h2>
+
+        <div class="skill-filters" id="skillFilters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="languages">Languages</button>
+            <button class="filter-btn" data-filter="frameworks">Frameworks</button>
+            <button class="filter-btn" data-filter="ai-ml">AI/ML & Data</button>
+            <button class="filter-btn" data-filter="databases">Databases</button>
+            <button class="filter-btn" data-filter="cloud">Cloud & DevOps</button>
+            <button class="filter-btn" data-filter="core-cs">Core CS</button>
+        </div>
+
+        <div class="skill-grid" id="skillGrid">
+
+            <!-- Languages -->
+            <div class="skill-card" data-category="languages">
+                <i class="devicon-python-plain colored"></i>
+                <span>Python</span>
+            </div>
+            <div class="skill-card" data-category="languages">
+                <i class="devicon-java-plain colored"></i>
+                <span>Java</span>
+            </div>
+            <div class="skill-card" data-category="languages">
+                <i class="devicon-javascript-plain colored"></i>
+                <span>JavaScript</span>
+            </div>
+            <div class="skill-card" data-category="languages">
+                <i class="devicon-typescript-plain colored"></i>
+                <span>TypeScript</span>
+            </div>
+            <div class="skill-card" data-category="languages">
+                <i class="fa-solid fa-database"></i>
+                <span>SQL</span>
+            </div>
+            <div class="skill-card" data-category="languages">
+                <i class="devicon-cplusplus-plain colored"></i>
+                <span>C++</span>
+            </div>
+            <div class="skill-card" data-category="languages">
+                <i class="devicon-csharp-plain colored"></i>
+                <span>C#</span>
+            </div>
+            <div class="skill-card" data-category="languages">
+                <i class="devicon-c-plain colored"></i>
+                <span>C</span>
+            </div>
+            <div class="skill-card" data-category="languages">
+                <i class="devicon-dotnetcore-plain colored"></i>
+                <span>.NET</span>
+            </div>
+
+            <!-- Frameworks & Libraries -->
+            <div class="skill-card" data-category="frameworks">
+                <i class="devicon-react-original colored"></i>
+                <span>React</span>
+            </div>
+            <div class="skill-card" data-category="frameworks">
+                <i class="devicon-nodejs-plain-wordmark colored"></i>
+                <span>Node.js</span>
+            </div>
+            <div class="skill-card" data-category="frameworks">
+                <i class="devicon-express-original"></i>
+                <span>Express.js</span>
+            </div>
+            <div class="skill-card" data-category="frameworks">
+                <i class="devicon-fastapi-plain colored"></i>
+                <span>FastAPI</span>
+            </div>
+            <div class="skill-card" data-category="frameworks">
+                <i class="devicon-pandas-original colored"></i>
+                <span>Pandas</span>
+            </div>
+            <div class="skill-card" data-category="frameworks">
+                <i class="devicon-numpy-original colored"></i>
+                <span>NumPy</span>
+            </div>
+            <div class="skill-card" data-category="frameworks">
+                <i class="devicon-scikitlearn-plain colored"></i>
+                <span>Scikit-learn</span>
+            </div>
+            <div class="skill-card" data-category="frameworks">
+                <i class="devicon-tensorflow-original colored"></i>
+                <span>TensorFlow</span>
+            </div>
+            <div class="skill-card" data-category="frameworks">
+                <i class="devicon-keras-plain colored"></i>
+                <span>Keras</span>
+            </div>
+
+            <!-- AI/ML & Data -->
+            <div class="skill-card" data-category="ai-ml">
+                <i class="fa-solid fa-brain"></i>
+                <span>Machine Learning</span>
+            </div>
+            <div class="skill-card" data-category="ai-ml">
+                <i class="fa-solid fa-network-wired"></i>
+                <span>Deep Learning</span>
+            </div>
+            <div class="skill-card" data-category="ai-ml">
+                <i class="fa-solid fa-comments"></i>
+                <span>NLP</span>
+            </div>
+            <div class="skill-card" data-category="ai-ml">
+                <i class="fa-solid fa-robot"></i>
+                <span>LLMs</span>
+            </div>
+            <div class="skill-card" data-category="ai-ml">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                <span>RAG</span>
+            </div>
+            <div class="skill-card" data-category="ai-ml">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>XGBoost</span>
+            </div>
+            <div class="skill-card" data-category="ai-ml">
+                <i class="fa-regular fa-lightbulb"></i>
+                <span>SHAP Explainability</span>
+            </div>
+            <div class="skill-card" data-category="ai-ml">
+                <i class="fa-solid fa-chart-simple"></i>
+                <span>Power BI</span>
+            </div>
+            <div class="skill-card" data-category="ai-ml">
+                <i class="fa-solid fa-chart-pie"></i>
+                <span>Tableau</span>
+            </div>
+            <div class="skill-card" data-category="ai-ml">
+                <i class="fa-solid fa-file-excel"></i>
+                <span>Excel</span>
+            </div>
+
+            <!-- Databases -->
+            <div class="skill-card" data-category="databases">
+                <i class="devicon-postgresql-plain colored"></i>
+                <span>PostgreSQL</span>
+            </div>
+            <div class="skill-card" data-category="databases">
+                <i class="devicon-mysql-plain colored"></i>
+                <span>MySQL</span>
+            </div>
+            <div class="skill-card" data-category="databases">
+                <i class="devicon-sqlite-plain colored"></i>
+                <span>SQLite</span>
+            </div>
+
+            <!-- Cloud, DevOps & Tools -->
+            <div class="skill-card" data-category="cloud">
+                <i class="devicon-amazonwebservices-plain-wordmark colored"></i>
+                <span>AWS</span>
+            </div>
+            <div class="skill-card" data-category="cloud">
+                <i class="devicon-vercel-original"></i>
+                <span>Vercel</span>
+            </div>
+            <div class="skill-card" data-category="cloud">
+                <i class="devicon-docker-plain colored"></i>
+                <span>Docker</span>
+            </div>
+            <div class="skill-card" data-category="cloud">
+                <i class="devicon-git-plain colored"></i>
+                <span>Git</span>
+            </div>
+            <div class="skill-card" data-category="cloud">
+                <i class="fa-solid fa-plug"></i>
+                <span>REST APIs</span>
+            </div>
+            <div class="skill-card" data-category="cloud">
+                <i class="fa-solid fa-key"></i>
+                <span>JWT Auth</span>
+            </div>
+            <div class="skill-card" data-category="cloud">
+                <i class="fa-solid fa-sitemap"></i>
+                <span>System Design</span>
+            </div>
+            <div class="skill-card" data-category="cloud">
+                <i class="fa-solid fa-arrows-rotate"></i>
+                <span>Agile/Scrum</span>
+            </div>
+            <div class="skill-card" data-category="cloud">
+                <i class="devicon-githubactions-plain colored"></i>
+                <span>CI/CD</span>
+            </div>
+
+            <!-- Core CS -->
+            <div class="skill-card" data-category="core-cs">
+                <i class="fa-solid fa-list-ol"></i>
+                <span>Data Structures & Algorithms</span>
+            </div>
+            <div class="skill-card" data-category="core-cs">
+                <i class="fa-solid fa-cubes"></i>
+                <span>OOP</span>
+            </div>
+            <div class="skill-card" data-category="core-cs">
+                <i class="fa-solid fa-database"></i>
+                <span>DBMS</span>
+            </div>
+            <div class="skill-card" data-category="core-cs">
+                <i class="fa-solid fa-desktop"></i>
+                <span>Operating Systems</span>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="certifications-section" id="certifications">
+        <h2 class="section-title">Certifications - <span class="purple-text">Learning Milestones!</span></h2>
+
+        <div class="cert-grid">
+
+            <div class="cert-item">
+                <div class="cert-img-wrapper">
+                    <img src="portfolio_assets/Cert_MachineLearning_Udemy.jpg"
+                        alt="Learn Machine Learning & AI — Udemy">
+                </div>
+                <div class="cert-info">
+                    <h3>Learn Machine Learning & AI</h3>
+                    <p>Udemy · January 2025</p>
+                </div>
+            </div>
+
+            <div class="cert-item">
+                <div class="cert-img-wrapper">
+                    <img src="portfolio_assets/Cert_DataScience_BritishAirways.jpg"
+                        alt="Data Science Job Simulation — British Airways">
+                </div>
+                <div class="cert-info">
+                    <h3>Data Science Job Simulation</h3>
+                    <p>British Airways · May 2025</p>
+                </div>
+            </div>
+
+            <div class="cert-item">
+                <div class="cert-img-wrapper">
+                    <img src="portfolio_assets/Cert_Excel_Microsoft.jpg"
+                        alt="Preparing Data for Analysis with Microsoft Excel">
+                </div>
+                <div class="cert-info">
+                    <h3>Preparing Data for Analysis with Microsoft Excel</h3>
+                    <p>Microsoft · June 2025</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <br>
+
+    <section class="certifications-section" id="achievements">
+        <h2 class="section-title">Achievements - <span class="purple-text">Track Record!</span></h2>
+        <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; max-width: 700px; margin: 40px auto 0;">
+            <a href="https://leetcode.com/u/Yashraj012/" target="_blank" class="profile-card"
+                style="padding: 40px 20px;">
+                <div style="font-size: 3rem; font-weight: 800; line-height: 1;" class="purple-text">600+</div>
+                <p style="margin-top: 8px; color: #d1d5db;">LeetCode Problems Solved</p>
+            </a>
+            <a href="https://leetcode.com/u/Yashraj012/" target="_blank" class="profile-card"
+                style="padding: 40px 20px;">
+                <div style="font-size: 3rem; font-weight: 800; line-height: 1;" class="purple-text">1,460</div>
+                <p style="margin-top: 8px; color: #d1d5db;">LeetCode Rank</p>
+            </a>
+        </div>
+    </section>
+
+    <br>
+
+    <section class="profiles-section" id="profiles">
+        <h2 class="section-title">Web Presence - <span class="purple-text">Dev Network!</span></h2>
+        <div class="profile-header">
+            <div class="profile-img-main">
+                <img src="portfolio_assets/Yash_Profile.png" alt="Yash Raj">
+            </div>
+            <div class="profile-text">
+                <p class="purple-text">@Yashraj</p>
+            </div>
+        </div>
+
+        <div class="profiles-grid">
+
+            <a href="https://linkedin.com/in/yash-raj-7225b3212" target="_blank" class="profile-card">
+                <div class="profile-icon">
+                    <i class="fa-brands fa-linkedin" style="color: #0077b5;"></i>
+                </div>
+                <div class="profile-info">
+                    <h3>LinkedIn</h3>
+                    <p>Connect</p>
+                </div>
+            </a>
+
+            <a href="https://github.com/Yashraj413" target="_blank" class="profile-card">
+                <div class="profile-icon">
+                    <i class="fa-brands fa-github" style="color: #fff;"></i>
+                </div>
+                <div class="profile-info">
+                    <h3>GitHub</h3>
+                    <p>Commit</p>
+                </div>
+            </a>
+
+            <a href="https://leetcode.com/u/Yashraj012/" target="_blank" class="profile-card">
+                <div class="profile-icon">
+                    <i class="devicon-leetcode-plain colored"></i>
+                </div>
+                <div class="profile-info">
+                    <h3>LeetCode</h3>
+                    <p>Compete</p>
+                </div>
+            </a>
+
+            <a href="https://instagram.com/yash._.raj__" target="_blank" class="profile-card">
+                <div class="profile-icon">
+                    <i class="fa-brands fa-instagram" style="color: #e1306c;"></i>
+                </div>
+                <div class="profile-info">
+                    <h3>Instagram</h3>
+                    <p>Follow</p>
+                </div>
+            </a>
+        </div>
+        <br>
+        <p class="profile-note">You can explore further by clicking on any of the profile cards above!</p>
+    </section>
+
+    <br>
+
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <h2 class="section-title">Let's Build - <span class="purple-text">Something Intelligent!</span></h2>
+            <h4 class="contact-note">Have a project, idea, or opportunity in mind?<br> I'm always interested in
+                building useful products and solving challenging problems.</h4>
+            <div class="contact-card">
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder=" " autocomplete="off">
+                        <label for="name">Name</label>
+                        <i class="fa-solid fa-user input-icon"></i>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder=" " autocomplete="off">
+                        <label for="email">Email</label>
+                        <i class="fa-solid fa-envelope input-icon"></i>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+                        <label for="message">Message</label>
+                        <i class="fa-solid fa-comment input-icon"></i>
+                    </div>
+                    <button type="submit" class="btn-resume btn-submit">
+                        <span>Send Message</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <br>
+
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <h2 class="footer-logo">Yash<span class="purple-text">Raj</span></h2>
+                <p class="footer-tagline">Full-Stack • AI/ML • Data</p>
+            </div>
+
+            <ul class="footer-nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#profiles">Profiles</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="footer-socials">
+                <a href="https://linkedin.com/in/yash-raj-7225b3212" target="_blank" class="social-link linkedin"
+                    aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Yashraj413" target="_blank" class="social-link github"
+                    aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://leetcode.com/u/Yashraj012/" target="_blank" class="social-link"
+                    aria-label="LeetCode"><i class="devicon-leetcode-plain colored"></i></a>
+                <a href="https://instagram.com/yash._.raj__" target="_blank" class="social-link"
+                    aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:yashraj2349@gmail.com" target="_blank" class="social-link email" aria-label="Email"><i
+                        class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Yash Raj. All rights reserved.</p>
+            <button id="backToTop" class="back-to-top" aria-label="Back to Top">
+                <i class="fa-solid fa-arrow-up"></i>
+            </button>
+        </div>
+    </footer>
+
+    <div id="resumeModal" class="resume-modal">
+        <div class="resume-modal-content glass-card">
+            <span class="close-modal" id="closeResumeBtn">&times;</span>
+            <h2 style="margin-bottom: 20px;">My Resume - <span class="purple-text">On Paper!</span></h2>
+            <div class="resume-iframe-container">
+                <iframe src="portfolio_assets/Yash_Raj_Resume.pdf" width="100%" height="100%"
+                    style="border: none;"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script src="3d_background.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
