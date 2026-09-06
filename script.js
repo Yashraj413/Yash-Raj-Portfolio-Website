@@ -64,25 +64,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const cursorDot = document.querySelector('[data-cursor-dot]');
     const cursorOutline = document.querySelector('[data-cursor-outline]');
+    const isTouch = window.matchMedia('(hover: none) and (pointer: coarse)').matches || ('ontouchstart' in window) || window.innerWidth <= 768;
 
-    window.addEventListener('mousemove', function (e) {
-        const posX = e.clientX;
-        const posY = e.clientY;
+    if (cursorDot && cursorOutline && !isTouch) {
+        window.addEventListener('mousemove', function (e) {
+            const posX = e.clientX;
+            const posY = e.clientY;
 
-        cursorDot.style.left = `${posX}px`;
-        cursorDot.style.top = `${posY}px`;
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
 
-        cursorOutline.animate({
-            left: `${posX}px`,
-            top: `${posY}px`
-        }, { duration: 500, fill: "forwards" });
-    });
+            cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, { duration: 500, fill: "forwards" });
+        });
 
-    const interactables = document.querySelectorAll('a, button, .floating-icon');
-    interactables.forEach(el => {
-        el.addEventListener('mouseenter', () => cursorOutline.classList.add('hovered'));
-        el.addEventListener('mouseleave', () => cursorOutline.classList.remove('hovered'));
-    });
+        const interactables = document.querySelectorAll('a, button, .floating-icon');
+        interactables.forEach(el => {
+            el.addEventListener('mouseenter', () => cursorOutline.classList.add('hovered'));
+            el.addEventListener('mouseleave', () => cursorOutline.classList.remove('hovered'));
+        });
+    }
 
     const timelineSections = document.querySelectorAll('.timeline');
 
@@ -482,7 +485,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const pillRect = pill.getBoundingClientRect();
         const linkRect = activeLink.getBoundingClientRect();
 
-        const left = linkRect.left - pillRect.left;
+        const left = linkRect.left - pillRect.left + pill.scrollLeft;
         const width = linkRect.width;
 
         indicator.style.left = left + 'px';
@@ -498,6 +501,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (link.dataset.section === sectionId) {
                 link.classList.add('active');
                 updateIndicator(link);
+                // Scroll into view on mobile so user sees the active tab
+                const pill = nav.querySelector('.nav-pill');
+                if (pill && pill.scrollWidth > pill.clientWidth) {
+                    link.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+                }
             } else {
                 link.classList.remove('active');
             }
@@ -544,7 +552,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', checkNavVisibility, { passive: true });
 
-    // ── Update indicator on resize ──
+    // ── Update indicator on resize and horizontal scroll ──
+    const navPill = nav.querySelector('.nav-pill');
+    if (navPill) {
+        navPill.addEventListener('scroll', () => {
+            const activeLink = nav.querySelector('.nav-link.active');
+            updateIndicator(activeLink);
+        }, { passive: true });
+    }
+
     window.addEventListener('resize', () => {
         heroHeight = heroSection ? heroSection.offsetHeight : window.innerHeight;
         const activeLink = nav.querySelector('.nav-link.active');

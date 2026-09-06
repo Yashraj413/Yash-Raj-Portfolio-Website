@@ -114,15 +114,10 @@ if (hero) {
             { opacity: 1, scale: 1, y: 0 },
             "-=0.5"
         )
-        .fromTo(".hero-buttons .btn-resume:first-child",
-            { opacity: 0, x: -50 },
-            { opacity: 1, x: 0 },
+        .fromTo(".hero-buttons .btn-resume",
+            { opacity: 0, y: 30 },
+            { opacity: 1, y: 0, stagger: 0.15 },
             "-=0.5"
-        )
-        .fromTo(".hero-buttons .btn-resume:last-child",
-            { opacity: 0, x: 50 },
-            { opacity: 1, x: 0 },
-            "<"
         );
 }
 
@@ -148,12 +143,18 @@ document.querySelectorAll('.section-title').forEach(title => {
 const timelineItems = document.querySelectorAll('.timeline-item');
 timelineItems.forEach((item) => {
     const isLeft = item.classList.contains('left');
+    const isMobile = window.innerWidth <= 768;
     gsap.fromTo(item,
-        { opacity: 0, x: isLeft ? -80 : 80 },
+        {
+            opacity: 0,
+            x: isMobile ? 0 : (isLeft ? -80 : 80),
+            y: isMobile ? 30 : 0
+        },
         {
             opacity: 1,
             x: 0,
-            duration: 1,
+            y: 0,
+            duration: 0.9,
             ease: "power2.out",
             scrollTrigger: {
                 trigger: item,
